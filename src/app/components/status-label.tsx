@@ -14,6 +14,8 @@ export interface StatusLabelProps {
   disabled?: boolean;
 }
 
+console.log(process.env.CRM_SECRET_KEY);
+
 function StatusLabel({ children, status, disabled }: StatusLabelProps) {
   return (
     <div
