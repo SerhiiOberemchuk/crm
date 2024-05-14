@@ -33,7 +33,7 @@ export default function SideBar({}: SideBarProms) {
             <Image
               width={18}
               height={18}
-              src="/public/icons/arrow-left-on-rectangle.svg"
+              src="/icons/arrow-left-on-rectangle.svg"
               alt="exit icon"
             />
             <span className="font-medium text-white">Exit</span>
