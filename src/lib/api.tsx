@@ -42,6 +42,7 @@ export interface Company {
   countryId: string;
   countryTitle: string;
   avatar?: string;
+  company:string
 }
 
 export interface Promotion {
