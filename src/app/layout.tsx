@@ -4,11 +4,13 @@ import './globals.css';
 
 const font = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export interface RootLayoutProps {
   children: React.ReactNode;
-}>) {
+}
+
+export default function RootLayout({ children }: RootLayoutProps) {
+  console.log('render layout');
+
   return (
     <html lang="en">
       <body className={font.className}>{children}</body>
