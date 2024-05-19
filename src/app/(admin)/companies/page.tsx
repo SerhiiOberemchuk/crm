@@ -1,9 +1,8 @@
 import React from 'react';
-import CompanyTable from '@/app/components/company-table';
-
-import getQueryClient from '@/lib/utils/getQueryClient';
+import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
 import { getCompanies } from '@/lib/api';
-import { HydrationBoundary, dehydrate } from '@tanstack/react-query';
+import getQueryClient from '@/lib/utils/getQueryClient';
+import CompanyTable from '@/app/components/company-table';
 
 export interface PageProps {}
 
@@ -17,6 +16,7 @@ export default async function Page({}: PageProps) {
   });
 
   const dehydratedState = dehydrate(queryClient);
+
   return (
     <HydrationBoundary state={dehydratedState}>
       <CompanyTable />
